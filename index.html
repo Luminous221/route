@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
-    <title>上海南站到景点公交路线（HTTPS安全版）</title>
+    <title>上海热门景点公交路线</title>
     <style>
         html, body, #container {
             width: 100%;
@@ -99,6 +99,10 @@
         zoom: 13
     });
 
+    // 测试插件功能
+    const transfer = new AMap.Transfer();
+    console.log("Transfer插件已加载：", transfer);
+    
     // 创建公交路线规划实例
     const transfer = new AMap.Transfer({
         map: map,
