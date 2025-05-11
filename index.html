@@ -56,10 +56,10 @@
 
 <script>
     // 上海南站坐标
-    const startLngLat = new AMap.LngLat(121.4307, 31.1547);
+    var startLngLat = new AMap.LngLat(121.4307, 31.1547);
     
     // 地点数据
-    const locations = [
+    var locations = [
         { name: "外滩", lng: 121.4904, lat: 31.2415 },
         { name: "南京路步行街", lng: 121.4752, lat: 31.2356 },
         // ...保持原文档完整数据（此处省略）...
@@ -67,14 +67,14 @@
     ];
 
     // 初始化地图
-    const map = new AMap.Map("container", {
+    var map = new AMap.Map("container", {
         resizeEnable: true,
         center: [121.4737, 31.2304],
         zoom: 13
     });
 
     // 创建公交路线规划实例
-    const transfer = new AMap.Transfer({
+    var transfer = new AMap.Transfer({
         map: map,
         city: '上海市',
         panel: 'panel',
@@ -82,9 +82,9 @@
     });
 
     // 生成地点列表
-    const locationsContainer = document.getElementById('locations-container');
+    var locationsContainer = document.getElementById('locations-container');
     locations.forEach(location => {
-        const div = document.createElement('div');
+        var div = document.createElement('div');
         div.className = 'location-item';
         div.textContent = location.name;
         div.onclick = () => {
