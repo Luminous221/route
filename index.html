@@ -262,11 +262,13 @@
                 
                 // 初始化分类标记
                 initMarkers(AMap);
-                
+		    
                 // 启动定时刷新
                 // 修改定时器存储方式（原有代码修改）
                 refreshInterval = setInterval(() => refreshHeatmap(AMap), 5000);
-
+		    
+		 initRouteMode();
+		    
             }).catch(e => {
                 console.error("地图加载失败:", e);
             });
@@ -567,7 +569,7 @@
 
         // 初始化地图
         initMap();
- 	initRouteMode();
+ 	
     </script>
 </body>
 </html>
