@@ -285,7 +285,8 @@
                 queryGroup.classList.add('active');
                 routeGroup.classList.remove('active');
                 clearInterval(refreshInterval); // 停止实时刷新
-            } else {
+            } 
+	    if (mode === 'realtime') {
                 queryGroup.classList.remove('active');
                 // 恢复实时刷新（原有代码修改）
                 refreshInterval = setInterval(() => refreshHeatmap(AMap), 5000);
